@@ -1,0 +1,29 @@
+Attachment Rollup
+
+Trigger, Class, Custom setting implementing rollup count of attachments on any object. 
+Also, it will rollup the max date value of CreateDate of all attachments (most recent
+attachment). 
+
+Core Project Contents: 
+AttachmentRollupTrigger.cls
+AttachmentRollupException.cls
+AttachmentRollupTest.cls
+AttachmentRollupTrigger.trigger
+csRollupObj__c.object
+
+Test Object - can be replaced by an actual object in installed org
+Attachment_Rollup_Tester__c.object
+Attachment_Rollup_Tester__c-Attachment Rollup Tester Layout.layout
+
+Once installed, add two fields to any object that supports attachments. One field 
+should be Number data type. The other Date/Time. 
+
+csRollupObj__c is a custom setting. For each object that you want to have the rollup
+count, add a custom setting record. 
+	Name: sObject prefix. Examples - Account: 001 | Case: 500 | etc.
+	sObject: sObject API Name. Originally intended for dynamic Apex/SOQL...
+		 	 but not actually used. 
+	Count_Field__c: The number field. Tests assume Integer, so best as 0 decimal places
+	Max_Date_Field__c: The Date/Time field. Optional. 
+
+And that should do it. 

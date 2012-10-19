@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>This public setting is to identify objects which you want to roll-up attachment count and most-recent attachment date to. Put the three-character object Id in the Name field and the sObject API name in the sObject field. 
+
+Example: 
+- Account - 
+Name: 001
+sObject: Account
+
+- District -
+Name: a1B
+sObject: District__c</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Count_Field__c</fullName>
+        <description>Field that will store the rollup count of attachments for this object. For instance, &apos;Attachment_Count__c&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field that will store the rollup count of attachments for this object. For instance, &apos;Attachment_Count__c&apos;</inlineHelpText>
+        <label>Count Field</label>
+        <length>100</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Date_Field__c</fullName>
+        <description>API name for the field that will rollup the most recent date field to rollup. For instance, &apos;Most_Recent_Created__c&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field that will store the rollup count of attachments for this object. For instance, &apos;Attachment_Count__c&apos;</inlineHelpText>
+        <label>Max Date Field</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sObject__c</fullName>
+        <description>Enter the API name for the sObject that corresponds to the three-character sObject Id.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>sObject API name (examples: Account, Case, District__c, School__c)</inlineHelpText>
+        <label>sObject</label>
+        <length>100</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Attachment Rollup Objects</label>
+</CustomObject>

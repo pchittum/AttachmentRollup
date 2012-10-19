@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AttachmentRollupException</members>
+        <members>AttachmentRollupHelper</members>
+        <members>AttachmentRollupTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AttachmentRollupTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Attachment_Rollup_Tester__c</members>
+        <members>csRollupObj__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Attachment_Rollup_Tester__c-Attachment Rollup Tester Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>26.0</version>
+</Package>
