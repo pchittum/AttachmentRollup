@@ -8,10 +8,14 @@ Example:
 - Account - 
 Name: 001
 sObject: Account
+Count_Field__c: &lt;a custom number data type field&gt;
+Max_Date_Field: &lt;a custom datetime field&gt;
 
 - District -
 Name: a1B
-sObject: District__c</description>
+sObject: District__c
+Count_Field__c: &lt;a custom number data type field&gt;
+Max_Date_Field: &lt;a custom datetime field&gt;</description>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <fields>
