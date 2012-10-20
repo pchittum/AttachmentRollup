@@ -25,5 +25,8 @@ count, add a custom setting record.
 		 	 but not actually used. 
 	Count_Field__c: The number field. Tests assume Integer, so best as 0 decimal places
 	Max_Date_Field__c: The Date/Time field. Optional. 
+	
+AppExchange Install Location: 
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04tG00000002SX6
 
 And that should do it. 
