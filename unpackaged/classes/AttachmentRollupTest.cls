@@ -293,11 +293,11 @@ public with sharing class AttachmentRollupTest {
     }
     
     public static List<sObject> createParents(Schema.sObjectType objType, Integer parentSize){
-        
+        Boolean isNameAutonumber = objType.getDescribe().fields.getMap().get('Name').getDescribe().isAutonumber();
         List<sObject> newParents = new List<sObject>();
         for (Integer i = 0 ; i < parentSize ; i ++){
             sObject thisParent = objType.newSObject();
-            if (!objType.getDescribe().fields.getMap().get('Name').getDescribe().isAutonumber()){
+            if (!isNameAutonumber){
                 thisParent.put('Name','TEST PARENT ' + i);
             }
             newParents.add(thisParent);
